@@ -1,0 +1,13 @@
+<p>This is the exchange page calculator, here your can do your business</p>
+<div *ngIf="exchanges"><p>Last check date of exchange values: {{this.exchanges.date}}</p></div>
+<div><p></p></div>
+<input type="text" [(ngModel)]="coinType">
+<br>
+<button (click)=" getExchanges(coinType)" >sds</button>
+<br>
+<input type="number" [(ngModel)]="compareEx">
+<!-- <p>{{this.compareEx}}</p> -->
+<!-- <div class="printExBase__exchanges" *ngFor="let coin of this.exchanges.rates | keyvalue">
+    Exchange: <b>{{coin.key}}</b> Value: <b>{{coin.value}}{{this.compareEx}}</b>
+</div> -->
+<app-print></app-print>

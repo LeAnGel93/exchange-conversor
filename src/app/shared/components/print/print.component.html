@@ -1,0 +1,12 @@
+<div *ngIf="allExchanges">
+<p  class="baseExchange">Your exchange: <span>{{this.allExchanges.base}}</span></p>
+<div class="printExBase__exchanges" (cosa)="receiveExchanges($event)" *ngFor="let coin of this.allExchanges.rates | keyvalue">
+    Exchange: <b>{{coin.key}}</b> Value: <b>{{this.multiplierEx(coin.value)}}</b>
+    
+</div>
+</div>
+<!-- <div>{{this.exchangedb().base}}</div> -->
+
+<!--// Si exchangedb() es una variable en vez de una funcion, no lo pinta ¿?
+    // Si meto un bucle dentro de otro, no me termina de pintar dates en el primer bucle.
+    // No se como no leer todas las instancias (solo quiero las dos primeras) -->
